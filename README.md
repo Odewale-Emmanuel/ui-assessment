@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Assessment – Frontend Skills Test
+
+This project is a replication of a provided user interface as part of a frontend skills assessment for internship consideration. The goal is to demonstrate proficiency in modern frontend development, including:
+
+- Pixel-perfect UI replication
+- Responsive design
+- Component-based architecture (React/Next.js)
+- Use of modern CSS (Tailwind)
+- Accessibility and best practices
+
+## Project Purpose
+
+This repository was created to showcase my ability to accurately implement a given UI design using Next.js and related technologies, as part of an internship application process.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can start editing the main page by modifying `app/page.tsx`. The app supports hot reloading for rapid development.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- Tailwind CSS
+- Radix UI
+- Embla Carousel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is for assessment purposes only and is not intended for production use.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_This project was bootstrapped with [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app)._
