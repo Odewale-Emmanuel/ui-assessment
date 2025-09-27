@@ -9,7 +9,7 @@ export default function Custom404() {
         src={_404}
         alt="page not foung"
       />
-      <span className="text-[.6rem] text-center sm:font-semibold">
+      <span className="text-[.6rem] text-gray-700 dark:text-white text-center sm:font-semibold">
         Oops, this page is under construction!
       </span>
     </div>
