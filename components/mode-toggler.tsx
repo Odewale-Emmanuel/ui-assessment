@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { IoIosSunny } from "react-icons/io";
+import { MdSunny } from "react-icons/md";
 import { BsMoonStarsFill } from "react-icons/bs";
 
 export function ModeToggler() {
@@ -20,10 +20,7 @@ export function ModeToggler() {
       <span className="sr-only">Toggle theme</span>
       {theme == "light" ? (
         <span>
-          <IoIosSunny
-            className="transition-all text-lg"
-            suppressHydrationWarning
-          />
+          <MdSunny className="transition-all text-md" />
         </span>
       ) : (
         <span>
