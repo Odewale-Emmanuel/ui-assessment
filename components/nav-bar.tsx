@@ -35,12 +35,45 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
-export function MobileNav() {
+function SelectMenu(): JSX.Element {
+  return (
+    <Select>
+      <SelectTrigger
+        className="w-auto border-0 p-0 shadow-none dark:bg-transparent hover:bg-transparent focus:outline-0 focus-visible:ring-0 hover:cursor-pointer dark:hover:bg-transparent text-[0.70em] text-gray-500"
+        suppressHydrationWarning
+      >
+        <SelectValue placeholder="benevolentrimboebie" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel className="text-[.6em]">Menu options</SelectLabel>
+          <SelectItem className="text-[.65em]" value="benevolentrimboebie">
+            benevolentrimboebie
+          </SelectItem>
+          <SelectItem className="text-[.65em]" value="banana">
+            Banana
+          </SelectItem>
+          <SelectItem className="text-[.65em]" value="blueberry">
+            Blueberry
+          </SelectItem>
+          <SelectItem className="text-[.65em]" value="grapes">
+            Grapes
+          </SelectItem>
+          <SelectItem className="text-[.65em]" value="pineapple">
+            Pineapple
+          </SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  );
+}
+
+function MobileNav(): JSX.Element {
   const pathname = usePathname();
 
   return (
     <Drawer>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild suppressHydrationWarning>
         <button className="hover:cursor-pointer">
           <span className="sr-only">mobile nav menu button</span>
           <span>
@@ -77,7 +110,7 @@ export function MobileNav() {
 
           <div className="inline-flex gap-2 items-center">
             <span className="w-6 aspect-square inline-block rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></span>
-            <NavBarLeft />
+            <SelectMenu />
           </div>
 
           <ul className="flex items-center w-auto bg-gray-200/40 dark:bg-black p-1 rounded-lg gap-1">
@@ -283,15 +316,13 @@ export function MobileNav() {
               </span>
             </Link>
 
-            <Link href={"/support"} className="inline-flex items-center">
-              <span className="inline-flex items-center bg-gray-200/40 dark:bg-black rounded-lg py-2 px-2.5">
+            <Link href={"/notification"} className="inline-flex items-center">
+              <span className="inline-flex items-center gap-1 bg-gray-200/40 dark:bg-black rounded-lg py-2 px-2.5">
                 <FaBell className="text-sm" />
+                <span className="text-[.65em] inline-block">Notification</span>
               </span>
             </Link>
 
-            <span className="bg-gray-200/40 dark:bg-black rounded-lg">
-              <ModeToggler />
-            </span>
             <span className="w-6 aspect-square inline-block rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></span>
           </div>
         </div>
@@ -300,37 +331,7 @@ export function MobileNav() {
   );
 }
 
-function NavBarLeft(): JSX.Element {
-  return (
-    <Select>
-      <SelectTrigger className="w-auto border-0 p-0 shadow-none dark:bg-transparent hover:bg-transparent focus:outline-0 focus-visible:ring-0 hover:cursor-pointer dark:hover:bg-transparent text-[0.70em] text-gray-500">
-        <SelectValue placeholder="benevolentrimboebie" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel className="text-[.6em]">Menu options</SelectLabel>
-          <SelectItem className="text-[.65em]" value="benevolentrimboebie">
-            benevolentrimboebie
-          </SelectItem>
-          <SelectItem className="text-[.65em]" value="banana">
-            Banana
-          </SelectItem>
-          <SelectItem className="text-[.65em]" value="blueberry">
-            Blueberry
-          </SelectItem>
-          <SelectItem className="text-[.65em]" value="grapes">
-            Grapes
-          </SelectItem>
-          <SelectItem className="text-[.65em]" value="pineapple">
-            Pineapple
-          </SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-  );
-}
-
-export function NavBar() {
+export function NavBar(): JSX.Element {
   const pathname = usePathname();
 
   return (
@@ -354,7 +355,7 @@ export function NavBar() {
 
           <div className="inline-flex gap-2 items-center">
             <span className="w-6 aspect-square inline-block rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></span>
-            <NavBarLeft />
+            <SelectMenu />
           </div>
         </div>
 
@@ -565,7 +566,7 @@ export function NavBar() {
             </span>
           </Link>
 
-          <Link href={"/support"} className="inline-flex items-center">
+          <Link href={"/notification"} className="inline-flex items-center">
             <span className="inline-flex items-center bg-gray-200/40 dark:bg-black rounded-lg py-2 px-2.5">
               <FaBell className="text-sm" />
             </span>
@@ -596,7 +597,10 @@ export function NavBar() {
           </span>
         </div>
 
-        <MobileNav />
+        <div className="inline-flex items-center gap-1.5">
+          <ModeToggler />
+          <MobileNav />
+        </div>
       </nav>
     </>
   );

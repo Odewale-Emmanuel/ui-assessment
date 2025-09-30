@@ -1,16 +1,24 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { MdSunny } from "react-icons/md";
 import { BsMoonStarsFill } from "react-icons/bs";
 
 export function ModeToggler() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, [theme]);
+
+  if (!mounted) return null;
 
   function handleThemeToggle(): void {
     setTheme(theme == "light" ? "dark" : "light");
   }
+
   return (
     <div
       role="button"
