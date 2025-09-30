@@ -1,6 +1,6 @@
 import { NavBar } from "@/components/nav-bar";
 import { HeroSection } from "@/components/hero";
-import { GenerateSection } from "@/components/generate";
+import { ToolSection } from "@/components/tool";
 import { GallerySection } from "@/components/gallery";
 import { StickyBanner } from "@/components/sticky-banner";
 
@@ -9,7 +9,7 @@ export default function Home() {
     <div className="">
       <NavBar />
       <HeroSection />
-      <GenerateSection />
+      <ToolSection />
       <GallerySection />
       <StickyBanner />
     </div>
