@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export type GenerateItemType = {
+export type ToolType = {
   icon: StaticImageData;
   iconType: "solid" | "gradient" | "transparent";
   iconColor: string;

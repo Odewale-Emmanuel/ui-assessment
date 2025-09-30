@@ -1,4 +1,4 @@
-import { GenerateItemType } from "@/types/generate-items-type";
+import { ToolType } from "@/types/tool-type";
 import Gallery from "@/public/gallery.svg";
 import VideoIcon from "@/public/video-icon.svg";
 import MagicTool from "@/public/magic-tool.svg";
@@ -8,7 +8,7 @@ import Folder from "@/public/folder.svg";
 import Microphone from "@/public/mic-lipsync.svg";
 import Person from "@/public/motion.svg";
 
-const GenerateItems: GenerateItemType[] = [
+const Tools: ToolType[] = [
   {
     icon: Gallery,
     iconType: "gradient",
@@ -157,4 +157,4 @@ const GenerateItems: GenerateItemType[] = [
   },
 ];
 
-export { GenerateItems };
+export { Tools };
