@@ -32,11 +32,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(fonts.geistMono.className, fonts.geistSans.className)}
+        className={cn(
+          fonts.inter.className,
+          fonts.geistSans.className,
+          fonts.geistMono.className,
+          "antialiased"
+        )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
